@@ -1,0 +1,10 @@
+<div class="my-sidebar-menu">
+  <ul class="zero-inline-padding">
+    <div *ngFor="let car of cars; index as i">
+      <app-menu-item
+        [car]="car"
+        [index]="i+1"
+      ></app-menu-item>
+    </div>
+  </ul>
+</div>

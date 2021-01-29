@@ -1,0 +1,5 @@
+<div>
+  <app-sidebar-header (filterChanged)="onFilterCars($event)"></app-sidebar-header>
+  <app-sidebar-menu [cars]="cars"></app-sidebar-menu>
+  <app-sidebar-footer [carSummaries]="cars | getSummary"></app-sidebar-footer>
+</div>

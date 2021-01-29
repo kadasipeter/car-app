@@ -1,0 +1,20 @@
+<a>
+  <div class="list-group-item list-group-item-action my-padding">
+    <p class="line1">
+      <b>{{ index }}. {{ car.brand }}</b>
+      <span style="float: right">
+        {{ car.productionYear }}
+      </span>
+    </p>
+    <p class="line2">{{ car.color }}</p>
+    <p></p>
+    <p class="line3">
+      {{ car.price }} Eur
+      <span
+        class="badge badge-pill badge-primary my-badge"
+        [class.badge-success]="car | isFairCar"
+      >{{ (car | isFairCar) ? "Fair" : "Expensive" }}
+      </span>
+    </p>
+  </div>
+</a>

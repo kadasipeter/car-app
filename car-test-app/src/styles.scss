@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'styles/bootstrap';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.in-the-middle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.my-area {
+  position: absolute;
+  top: 59px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.my-content {
+  height: 100%;
+  overflow: auto;
+}
+
+.my-navbar {
+  padding-left: 0;
+}
+
+.my-car-create-container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.my-create-button {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.my-sidebar {
+  float: left;
+  width: 270px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.my-sidebar-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem;
+  padding-bottom: 0;
+  background-color: white;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 1rem;
+}
+
+.my-sidebar-menu {
+  height: 100%;
+  z-index: -1;
+}
+
+.my-sidebar-footer {
+  position: sticky;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  padding: 1rem;
+  z-index: 1;
+  background-color: white;
+  margin-top: 1rem;
+  border-top: 1px solid #d9d9d9;
+  text-align: left;
+}
+
+.zero-inline-padding {
+  padding-inline-start: 0;
+}

@@ -1,0 +1,31 @@
+p {
+  margin-bottom: 2px;
+}
+
+.line1 {
+  font-size: 87%;
+}
+
+.line2 {
+  font-size: 100%;
+}
+
+.line3 {
+  font-size: 81%;
+}
+
+.my-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.my-badge {
+  position: absolute;
+  right: 0;
+  width: 70px;
+  margin-right: 1rem;
+}
+
+.list-group-item-action :hover {
+  opacity: 0.8;
+}
