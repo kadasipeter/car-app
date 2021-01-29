@@ -2,8 +2,8 @@ import { TestBed } from '@angular/core/testing';
 import { StoreModule } from '@ngrx/store';
 import { provideMockStore } from '@ngrx/store/testing';
 import { of } from 'rxjs';
-import { CarSelectorsService } from '../store/cars/car-selectors.service';
 
+import { CarSelectorsService } from '../store/cars/car-selectors.service';
 import { Car } from './car.model';
 import { CarService } from './car.service';
 
@@ -38,16 +38,9 @@ describe('CarService', () => {
 
   let service: CarService;
 
-  beforeEach(() => {
+  beforeEach(() =>
     TestBed.configureTestingModule({
-      imports: [
-        StoreModule.forRoot([], {
-          runtimeChecks: {
-            strictStateImmutability: true,
-            strictActionImmutability: true,
-          },
-        }),
-      ],
+      imports: [StoreModule.forRoot({})],
       providers: [
         provideMockStore,
         {
@@ -55,8 +48,10 @@ describe('CarService', () => {
           useValue: CarSelectorsServiceMock,
         },
       ],
-    });
+    })
+  );
 
+  beforeEach(() => {
     service = TestBed.inject(CarService);
   });
 
