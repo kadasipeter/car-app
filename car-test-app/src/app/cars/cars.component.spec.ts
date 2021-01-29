@@ -15,6 +15,7 @@ describe('CarsComponent', () => {
       ],
       imports: [
         RouterTestingModule,
+
         CarsModule
       ]
     })

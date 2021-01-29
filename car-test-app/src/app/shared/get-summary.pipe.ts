@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { CarSummary } from '../core/car-summary.model';
 import { Car } from '../core/car.model';
+import { CarSummary } from '../core/car-summary.model';
 
 @Pipe({
   name: 'getSummary',

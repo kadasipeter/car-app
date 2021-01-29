@@ -4,7 +4,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 import { MenuItemComponent } from './menu-item.component';
 
-const fakeCar: Car = {brand:"Audi", color:"Red", productionYear: 2020, price: 15000};
+const fakeCar: Car = {brand: 'Audi', color: 'Red', productionYear: 2020, price: 15000};
 
 describe('MenuItemComponent', () => {
   let component: MenuItemComponent;

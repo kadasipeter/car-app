@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+
 import { CarSummary } from 'src/app/core/car-summary.model';
 
 @Component({

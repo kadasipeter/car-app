@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { NavbarComponent } from './navbar/navbar.component';
-import { IsFairCarPipe } from './is-fair-car.pipe';
 import { GetSummaryPipe } from './get-summary.pipe';
+import { IsFairCarPipe } from './is-fair-car.pipe';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
