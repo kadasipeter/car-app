@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 
 import { AppState } from '../store/app-state';
@@ -13,18 +13,12 @@ import * as CarActions from '../store/cars/car.action';
 export class CarService {
   cars$: Observable<Car[]>;
 
-  private carsSubject: BehaviorSubject<Car[]>;
-  private cars: Car[] = [];
-
   constructor(
     private store: Store<{ cars: AppState }>,
-    private CarsSelectorsService: CarSelectorsService
+    private carsSelectorsService: CarSelectorsService
   ) {
     this.createCars();
-    this.carsSubject = new BehaviorSubject(this.cars);
-    this.cars$ = this.carsSubject.asObservable();
-
-    this.cars$ = CarsSelectorsService.getAllCars$();
+    this.cars$ = carsSelectorsService.getAllCars$();
   }
 
   addCar(brand: string): void {
@@ -32,8 +26,6 @@ export class CarService {
     if (brand.length > 0) {
       newCar.brand = brand;
     }
-    this.cars = [newCar, ...this.cars];
-    this.carsSubject.next(this.cars);
 
     this.store.dispatch(CarActions.CreateCar(newCar));
   }
@@ -50,7 +42,6 @@ export class CarService {
   private createCars(count: number = 300): void {
     for (let i = 1; i <= count; i++) {
       const newCar = this.createCar();
-      this.cars = [newCar, ...this.cars];
 
       this.store.dispatch(CarActions.CreateCar(newCar));
     }

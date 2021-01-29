@@ -8,12 +8,10 @@ import { Car } from 'src/app/core/car.model';
 
 const selectCarsFeature = createFeatureSelector<{ cars: AppState }>('cars');
 
-const selectAllCarsSelector = createSelector(
+export const selectAll = createSelector(
   selectCarsFeature,
   (state) => state.cars.cars
 );
-
-export const selectAll = createSelector(selectAllCarsSelector, (_) => _);
 
 @Injectable({
   providedIn: 'root',
